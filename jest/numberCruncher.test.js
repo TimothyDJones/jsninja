@@ -13,3 +13,11 @@ function factorsOf(n) {
 test('factors of 12', () => {
 	expect(factorsOf(12)).toEqual([1, 2, 3, 4, 6, 12]);
 });
+
+test('2 is prime', () => {
+	expect(isPrime(2)).toBe(true);
+});
+
+test('10 is *not* prime', () => {
+	expect(isPrime(10)).toBe(false);
+});
