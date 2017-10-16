@@ -1,5 +1,14 @@
 function factorsOf(n) {
 'use strict';
+	if (Number.isNaN(Number(n))) {
+		throw new RangeError("Argument Error: Value must be an integer/whole numeric value.");
+	}
+	if (n < 0) {
+		throw new RangeError("Argument Error: Value must be a positive number.");
+	}
+	if (!Number.isInteger(n)) {
+		throw new RangeError("Argument Error: Value must be an whole number.");
+	}
 	const factors = [];
 	for (let i = 1, max = Math.sqrt(n); i <= max; i++) {
 		if (n%i === 0) {
@@ -28,15 +37,15 @@ test('10 is *not* prime', () => {
 });
 
 test('factorsOf() should throw exception on non-numeric parameter.', () => {
-	expect(factorsOf('twelve')).toThrow();
+	expect(() => factorsOf('twelve')).toThrow();
 });
 
 test('factorsOf() should throw exception on negative number parameter.', () => {
-	expect(factorsOf(-2)).toThrow();
+	expect(() => factorsOf(-2)).toThrow();
 });
 
 test('factorsOf() should throw exception on non-whole number parameter.', () => {
-	expect(factorsOf(3.14159)).toThrow();
+	expect(() => factorsOf(3.14159)).toThrow();
 });
 
 test('isPrime() should return false on non-numeric parameter.', () => {
