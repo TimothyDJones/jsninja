@@ -6,6 +6,25 @@ function squareRoot(number) {
 	return Math.sqrt(number);
 }
 
+function imaginarySquareRoot(number) {
+'use strict';
+	let answer;
+	try {
+		answer = String(squareRoot(number));
+	} catch (error) {
+		console.log(error);
+		answer = squareRoot((-1)*number) + "i";
+	} finally {
+		answer = `+/-${answer}`;
+	}
+
+	return answer;
+}
+
 test("square root of 4 is 2", () => {
 	expect(squareRoot(4)).toBe(2);
+});
+
+test("square root of -4 is +/-2i", () => {
+	expect(imaginarySquareRoot(-4)).toBe("+/-2i");
 });
