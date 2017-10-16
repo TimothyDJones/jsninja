@@ -1,7 +1,7 @@
 function factorsOf(n) {
 'use strict';
 	const factors = [];
-	for (let i = 1; i < n; i++) {
+	for (let i = 1; i <= n; i++) {
 		if (n/i === Math.floor(n/i)) {
 			factors.push(i);
 		}
