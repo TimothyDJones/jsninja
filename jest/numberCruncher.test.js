@@ -38,3 +38,15 @@ test('factorsOf() should throw exception on negative number parameter.', () => {
 test('factorsOf() should throw exception on non-whole number parameter.', () => {
 	expect(factorsOf(3.14159)).toThrow();
 });
+
+test('isPrime() should return false on non-numeric parameter.', () => {
+	expect(isPrime('twelve')).toBe(false);
+});
+
+test('isPrime() should return false on negative number parameter.', () => {
+	expect(isPrime(-2)).toBe(false);
+});
+
+test('isPrime() should return false on non-whole number paramter.', () => {
+	expect(isPrime(3.14159)).toBe(false);
+});
