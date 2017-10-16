@@ -1,0 +1,22 @@
+{
+  "name": "jest",
+  "version": "1.0.0",
+  "description": "TDD with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest" 
+  },
+  "keywords": [
+    "TDD",
+    "Jest",
+    "JavaScript"
+  ],
+  "author": "Tim Jones",
+  "license": "ISC",
+  "jest": {
+	  "testPathDirs": [
+		  "./",
+		  "tests"
+	  ]
+  }
+}
